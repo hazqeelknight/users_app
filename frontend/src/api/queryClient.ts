@@ -42,12 +42,6 @@ export const queryKeys = {
     auditLogs: () => [...queryKeys.users.all, 'audit-logs'] as const,
     roles: () => [...queryKeys.users.all, 'roles'] as const,
     permissions: () => [...queryKeys.users.all, 'permissions'] as const,
-    invitations: () => [...queryKeys.users.all, 'invitations'] as const,
-    mfaDevices: () => [...queryKeys.users.all, 'mfa-devices'] as const,
-    samlConfigs: () => [...queryKeys.users.all, 'saml-configs'] as const,
-    oidcConfigs: () => [...queryKeys.users.all, 'oidc-configs'] as const,
-    ssoSessions: () => [...queryKeys.users.all, 'sso-sessions'] as const,
-    publicProfile: (slug: string) => [...queryKeys.users.all, 'public-profile', slug] as const,
   },
   
   // Events module

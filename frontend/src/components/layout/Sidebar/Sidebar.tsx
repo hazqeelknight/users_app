@@ -107,12 +107,6 @@ const navigationItems: NavigationItem[] = [
     label: 'Settings',
     path: '/settings',
     icon: Settings,
-    children: [
-      { id: 'profile', label: 'Profile', path: '/users/profile', icon: Settings },
-      { id: 'security', label: 'Security', path: '/users/security', icon: Settings },
-      { id: 'team', label: 'Team', path: '/users/team', icon: Settings },
-      { id: 'audit-logs', label: 'Audit Logs', path: '/users/audit-logs', icon: Settings },
-    ],
   },
 ];
 
