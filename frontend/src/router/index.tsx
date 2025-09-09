@@ -37,6 +37,56 @@ export const router = createBrowserRouter([
       </PublicRoute>
     ),
   },
+  {
+    path: '/verify-email',
+    element: (
+      <PublicRoute>
+        <React.Suspense fallback={<div>Loading...</div>}>
+          {React.createElement(React.lazy(() => import('@/users/pages/EmailVerificationPage')))}
+        </React.Suspense>
+      </PublicRoute>
+    ),
+  },
+  {
+    path: '/forgot-password',
+    element: (
+      <PublicRoute>
+        <React.Suspense fallback={<div>Loading...</div>}>
+          {React.createElement(React.lazy(() => import('@/users/pages/ForgotPasswordPage')))}
+        </React.Suspense>
+      </PublicRoute>
+    ),
+  },
+  {
+    path: '/reset-password',
+    element: (
+      <PublicRoute>
+        <React.Suspense fallback={<div>Loading...</div>}>
+          {React.createElement(React.lazy(() => import('@/users/pages/ResetPasswordPage')))}
+        </React.Suspense>
+      </PublicRoute>
+    ),
+  },
+  {
+    path: '/force-password-change',
+    element: (
+      <ProtectedRoute>
+        <React.Suspense fallback={<div>Loading...</div>}>
+          {React.createElement(React.lazy(() => import('@/users/pages/ForcePasswordChangePage')))}
+        </React.Suspense>
+      </ProtectedRoute>
+    ),
+  },
+  {
+    path: '/public/:organizer_slug',
+    element: (
+      <PublicRoute>
+        <React.Suspense fallback={<div>Loading...</div>}>
+          {React.createElement(React.lazy(() => import('@/users/pages/PublicProfilePage')))}
+        </React.Suspense>
+      </PublicRoute>
+    ),
+  },
   
   // Protected routes with layout
   {
